@@ -80,7 +80,7 @@ export default function Home() {
         <div>
           <Image className="rounded-3xl" src={programming} alt="photo" width={200} height={200} />
         </div>
-        <h2>About Me</h2>
+        <h2>About Mee</h2>
       </div>
     </>
   );
