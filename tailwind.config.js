@@ -17,6 +17,34 @@ module.exports = {
         primary: "#B63E96", // 240,86,199
         primaryDark: "#58E6D9", // 80,230,217
       },
+      keyframes: {
+        shake: {
+          "10%": {
+            transform: "rotate(15deg)",
+          },
+          "20%": {
+            transform: "rotate(-15deg)",
+          },
+          "30%": {
+            transform: "rotate(15deg)",
+          },
+          "40%": {
+            transform: "rotate(-15deg)",
+          },
+        },
+        spin: {
+          0: {
+            transform: "rotate(0deg)",
+          },
+          100: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        shake: "shake 0.25s",
+        spin: "spin 7s linear infinite",
+      },
     },
   },
   plugins: [],
