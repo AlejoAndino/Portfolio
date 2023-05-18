@@ -55,6 +55,7 @@ const About = () => {
           <li>Node.js</li>
           <li>MongoDB</li>
           <li>PostgreSQL</li>
+          <li>Git</li>
         </ul>
       </div>
     </div>
