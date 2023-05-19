@@ -53,7 +53,7 @@ export default function Home() {
           }}
         >
           <Image
-            className="bg-[#966fbe] rounded-full h-[450px] w-[320px] flex justify-center items-center"
+            className="bg-[#2057d8] rounded-full h-[450px] w-[320px] flex justify-center items-center"
             src={perfil}
             width={300}
             height={300}
