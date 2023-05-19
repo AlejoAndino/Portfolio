@@ -4,6 +4,7 @@ import Link from "next/link";
 import perfil from "../assets/perfil.png";
 import { motion } from "framer-motion";
 import About from "../components/About";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -75,8 +76,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      {/* About Section */}
       <About />
+
+      {/* Experience Section */}
+      <Experience />
     </>
   );
 }
