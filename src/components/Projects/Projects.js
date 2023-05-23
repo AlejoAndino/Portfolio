@@ -87,7 +87,7 @@ function Projects() {
         </h2>
       </motion.div>
 
-      <div className="m-11 flex flex-col gap-40">
+      <div className="m-11 flex flex-col gap-32">
         {projectsData.map(
           (
             {
@@ -130,7 +130,7 @@ function Projects() {
                   <div className="bg-[#101010] w-[900px] p-6">
                     <p>{projectDescription}</p>
                   </div>
-                  <ul className="flex gap-8">
+                  <ul className="flex gap-8 my-3">
                     {projectTech.map((tech) => (
                       <li className="project-info-tech-list-item" key={tech}>
                         {tech}
@@ -143,7 +143,7 @@ function Projects() {
                         href={projectExternalLinks.github}
                         className="project-info-links-item-link"
                       >
-                        <FiGithub />
+                        <FiGithub size={25} />
                       </Link>
                     </li>
                     <li className="project-info-links-item">
@@ -151,7 +151,7 @@ function Projects() {
                         href={projectExternalLinks.externalLink}
                         className="project-info-links-item-link"
                       >
-                        <FiExternalLink />
+                        <FiExternalLink size={25} />
                       </Link>
                     </li>
                   </ul>
