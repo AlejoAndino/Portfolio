@@ -87,19 +87,23 @@ function Projects() {
         </h2>
       </motion.div>
 
-      <div className="m-11 flex flex-col gap-20">
+      <div className="m-11 flex flex-col gap-40">
         {projectsData.map(
-          ({
-            image,
-            projectDescription,
-            projectLink,
-            projectExternalLinks,
-            projectName,
-            projectTech,
-          }) => {
+          (
+            {
+              image,
+              projectDescription,
+              projectLink,
+              projectExternalLinks,
+              projectName,
+              projectTech,
+            },
+            index
+          ) => {
+            const isInverted = index === 1;
             return (
               <motion.div
-                className="flex relative"
+                className={`flex relative ${isInverted ? "flex-row-reverse" : "flex-row"}`}
                 key={projectName}
                 initial="hidden"
                 whileInView="visible"
@@ -120,7 +124,7 @@ function Projects() {
                   />
                 </div>
 
-                <div className="z-10 flex flex-col w-[800px] items-end gap-2">
+                <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[800px] gap-2`}>
                   <p className="text-[#2095d8]">Featured Project</p>
                   <h3 className="text-4xl font-semibold">{projectName}</h3>
                   <div className="bg-[#101010] w-[900px] p-6">
