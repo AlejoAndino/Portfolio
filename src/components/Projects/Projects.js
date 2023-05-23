@@ -114,14 +114,15 @@ function Projects() {
                   hidden: { opacity: 0, y: 0 },
                 }}
               >
-                <div className="">
+                <div className="relative">
                   <Image
-                    className="h-[300px] relative"
+                    className="h-[300px] relative from-inherit"
                     width={600}
                     src={image}
                     alt={projectName}
                     quality={100}
                   />
+                  <span className="bg-[#2057d8] bg-opacity-50 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">&nbsp;</span>
                 </div>
 
                 <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[800px] gap-2`}>
