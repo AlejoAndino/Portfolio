@@ -69,7 +69,7 @@ function Projects() {
   return (
     <div className="text-light mx-20" id="work">
       <motion.div
-        className=""
+        className="flex justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -79,7 +79,7 @@ function Projects() {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2 className="text-4xl mb-4 font-medium">
+        <h2 className="text-4xl mb-4 font-bold">
           Latest Proyects{" "}
           <span className="h-[1px] ml-2 w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
@@ -103,7 +103,7 @@ function Projects() {
             const isInverted = index === 1;
             return (
               <motion.div
-                className={`flex relative ${isInverted ? "flex-row-reverse" : "flex-row"}`}
+                className={`flex justify-center relative ${isInverted ? "flex-row-reverse" : "flex-row"}`}
                 key={projectName}
                 initial="hidden"
                 whileInView="visible"
@@ -116,19 +116,19 @@ function Projects() {
               >
                 <div className="relative">
                   <Image
-                    className="h-[300px] relative from-inherit"
+                    className="h-[300px]"
                     width={600}
                     src={image}
                     alt={projectName}
                     quality={100}
                   />
-                  <span className="bg-[#2057d8] bg-opacity-50 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">&nbsp;</span>
+                  <span className="bg-[#2057d8] bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">&nbsp;</span>
                 </div>
 
-                <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[800px] gap-2`}>
+                <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[650px] gap-2`}>
                   <p className="text-[#2095d8]">Featured Project</p>
                   <h3 className="text-4xl font-semibold">{projectName}</h3>
-                  <div className="bg-[#101010] w-[900px] p-6">
+                  <div className="bg-[#101010] w-[750px] p-6">
                     <p>{projectDescription}</p>
                   </div>
                   <ul className="flex gap-8 my-3">

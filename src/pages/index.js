@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import About from "../components/About";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
             ease: "easeInOut",
           }}
         >
-          <p className="m-3 text-light">Hello Welcome!</p>
+          <p className="m-3 text-light font-semibold">Hello Welcome!</p>
           <h1 className="text-6xl my-3 text-light font-bold">
             Im Alejo Andino <br /> a Full Stack Developer
           </h1>
@@ -85,6 +86,9 @@ export default function Home() {
       
       {/* Experience Section */}
       <Experience />
+
+      {/* Contact Section */}
+      <Contact />
     </>
   );
 }
