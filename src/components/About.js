@@ -23,7 +23,7 @@ const About = () => {
         />
       </div>
 
-      <div className="w-[700px] ">
+      <div className="w-[700px]">
         <h2 className="text-4xl mb-4 font-bold">
           About Me{" "}
           <span className="h-[1px] ml-2 w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
