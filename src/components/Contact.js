@@ -21,7 +21,7 @@ const Contact = () => {
             <div className="lg:p-4 h-full ">
               <div>
                 <div className="col-12">
-                  <div className="google-map">
+                  <div className="google-map"> 
                     <div className="embed-responsive embed-responsive-21by9">
                       <iframe
                         className="embed-responsive-item w-[400px] h-[250px]"
@@ -44,7 +44,7 @@ const Contact = () => {
                 <p className="uppercase pt-8 font-semibold">Connect With Me</p>
                 <div className="flex items-center justify-between py-4">
                   <a
-                    href="https://www.linkedin.com/in/clint-briley-50056920a/"
+                    href="https://www.linkedin.com/in/alejoandino/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -53,7 +53,7 @@ const Contact = () => {
                     </div>
                   </a>
                   <a
-                    href="https://github.com/fireclint"
+                    href="https://github.com/alejoandino"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -135,7 +135,7 @@ const Contact = () => {
                     name="message"
                   ></textarea>
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4 font-semibold">
+                <button className="w-full bg-[#2057d8] rounded-xl p-4 text-gray-100 mt-4 font-semibold">
                   Send Message
                 </button>
               </form>

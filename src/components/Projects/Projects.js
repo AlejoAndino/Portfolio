@@ -122,7 +122,7 @@ function Projects() {
                     alt={projectName}
                     quality={100}
                   />
-                  <span className="bg-[#2057d8] bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">&nbsp;</span>
+                  <span className="bg-[#7f1ee7] bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">&nbsp;</span>
                 </div>
 
                 <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[650px] gap-2`}>
