@@ -5,6 +5,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 import chicCloset from "../../assets/ChicCloset.png";
 import gameLibrary from "../../assets/GameLibrary.png";
+import portafolio from '../../assets/Portafolio.png';
 
 function Projects() {
   const projectsData = [
@@ -47,7 +48,7 @@ function Projects() {
       },
     },
     {
-      image: gameLibrary,
+      image: portafolio,
       projectName: "PortFolio",
       projectLink: "https://deploy-videogames-eight.vercel.app/",
       projectDescription:
@@ -116,13 +117,13 @@ function Projects() {
               >
                 <div className="relative">
                   <Image
-                    className="h-[300px]"
+                    className="h-[300px] rounded-xl"
                     width={600}
                     src={image}
                     alt={projectName}
                     quality={100}
                   />
-                  <span className="bg-[#7f1ee7] bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">&nbsp;</span>
+                  <span className="bg-[#7f1ee7] rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-[600px] h-[300px]">&nbsp;</span>
                 </div>
 
                 <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[650px] gap-2`}>

@@ -10,7 +10,7 @@ const NavBar = () => {
   console.log(router);
 
   return (
-    <header className='w-full h-[120px] px-10 py-10 font-medium flex justify-between items-center bg-dark'>
+    <header className='fixed z-40 w-full h-[120px] px-10 py-10 font-medium flex justify-between items-center bg-dark bg-opacity-40 backdrop-blur-sm'>
 
       <Image src={logo} height={'100'} width={'100'} alt='logo' />
 

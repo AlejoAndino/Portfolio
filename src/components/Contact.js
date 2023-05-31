@@ -9,8 +9,8 @@ import ContactImg from "../assets/GameLibrary.png";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+    <div id="contact" className="w-full lg:h-full">
+      <div className="max-w-[1240px] m-auto px-2 w-full">
         <p className="text-xl tracking-widest uppercase text-[#2057d8]">
           Contact
         </p>
@@ -142,9 +142,9 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center py-12">
+        <div className="flex justify-center py-7">
           <Link href="/">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+            <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp className="text-[#2057d8]" size={30} />
             </div>
           </Link>
