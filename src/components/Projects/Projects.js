@@ -80,7 +80,7 @@ function Projects() {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2 className="text-4xl mb-4 font-bold">
+        <h2 className="text-4xl font-bold">
           Latest Proyects{" "}
           <span className="h-[1px] ml-2 w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
