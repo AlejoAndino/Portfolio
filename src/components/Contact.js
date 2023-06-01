@@ -10,7 +10,7 @@ import ContactImg from "../assets/GameLibrary.png";
 const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-full">
-      <div className="max-w-[1240px] m-auto px-2 w-full">
+      <div className="max-w-[1240px] m-auto px-2 w-full"> 
         <p className="text-xl tracking-widest uppercase text-[#2057d8]">
           Contact
         </p>
