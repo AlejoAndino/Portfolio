@@ -32,7 +32,7 @@ const Experience = () => {
 
         <div className="flex bg-[#0b0a15] p-8">
           <div className="w-[150px] h-[150px] mx-5 mt-2">
-            <Image src={henrylogo} alt="logo" />
+            <Image src={henrylogo} alt="logo" /> 
           </div>
 
           <div>
