@@ -2,10 +2,14 @@ import Image from "next/image";
 import React from "react";
 import programming from "../assets/programming.jpg";
 import spinner from "../assets/spinner.png";
+import colorSharp from '../assets/color-sharp.png';
 
 const About = () => {
   return (
-    <div className="text-light flex h-[80vh] justify-around items-center">
+    <div className="text-light flex h-[80vh] justify-around items-center bg-cover bg-no-repeat"
+    style={{
+      backgroundImage: `url(${colorSharp.src})`
+    }}>
       <div className="flex items-center relative">
         <Image
           className="rounded-3xl"
