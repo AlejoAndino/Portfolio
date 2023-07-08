@@ -109,7 +109,7 @@ export default function Home() {
             width="100%"
             id="blobSvg"
             className="absolute w-full h-full"
-            style={{ filter: "blur(50px)" }}
+            style={{ filter: "blur(50px)" }} 
           >
             <path fill="#2057d8">
               <animate
