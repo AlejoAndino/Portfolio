@@ -41,7 +41,9 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8 font-semibold text-center">Connect With Me</p>
+                <p className="uppercase pt-8 font-semibold text-center">
+                  Connect With Me
+                </p>
                 <div className="flex items-center justify-around py-4">
                   <a
                     href="https://www.linkedin.com/in/alejoandino/"
@@ -134,7 +136,15 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex justify-center py-7">
-          <Link href="/">
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("home").scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
             <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp className="text-[#2057d8]" size={30} />
             </div>
