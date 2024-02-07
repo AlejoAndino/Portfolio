@@ -9,7 +9,7 @@ import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact";
 import banner from "../assets/banner-bg.png";
 import NavBar from "@/components/NavBar";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 
 export default function Home() {
   const [animationKey, setAnimationKey] = useState(0);
@@ -17,6 +17,11 @@ export default function Home() {
   const handleAnimationEnd = () => {
     setAnimationKey(animationKey + 1);
   };
+
+  useEffect(() => {
+    // Scroll to the home section when the page mounts
+    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   return (
     <>
@@ -34,6 +39,7 @@ export default function Home() {
         style={{
           backgroundImage: `url(${banner.src})`,
         }}
+        id="home"
       >
         <motion.div
           className="w-[750px]"
@@ -86,7 +92,7 @@ export default function Home() {
             <path fill="#2057d8">
               <animate
                 attributeName="d"
-                dur="7000ms"
+                dur="5000ms"
                 repeatCount="indefinite"
                 values="
           M449.5,326.5Q403,403,326.5,429Q250,455,177,425.5Q104,396,93.5,323Q83,250,84,167.5Q85,85,167.5,82.5Q250,80,309.5,105.5Q369,131,432.5,190.5Q496,250,449.5,326.5Z;

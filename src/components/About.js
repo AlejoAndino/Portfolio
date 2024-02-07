@@ -6,7 +6,7 @@ import colorSharp from '../assets/color-sharp.png';
 
 const About = () => {
   return (
-    <div className="text-light flex h-[80vh] justify-around items-center bg-cover bg-no-repeat"
+    <div id="about" className="text-light flex h-[80vh] justify-around items-center bg-cover bg-no-repeat"
     style={{
       backgroundImage: `url(${colorSharp.src})`
     }}>
