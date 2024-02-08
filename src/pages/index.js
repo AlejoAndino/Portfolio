@@ -15,6 +15,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [animationKey, setAnimationKey] = useState(0);
+  //Para menu Desplegable
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleAnimationEnd = () => {
@@ -22,6 +23,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    // Scroll to the home section when the page mounts
     document.getElementById("home").scrollIntoView({ behavior: "smooth" });
   }, []);
 
@@ -37,22 +39,28 @@ export default function Home() {
 
       {/* HOME Section */}
       <div
-        className="flex flex-col md:flex-row justify-around items-center md:h-[100vh] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${banner.src})` }}
+        className="flex justify-around items-center h-[100vh] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${banner.src})`,
+        }}
         id="home"
       >
         <motion.div
-          className="w-full md:w-[50%] flex flex-col justify-center items-center px-5 md:px-0"
+          className="w-[750px] relative"
           initial={{ y: 200, opacity: 0, scale: 1 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
-          transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
+          transition={{
+            duration: 2,
+            delay: 0.5,
+            ease: "easeInOut",
+          }}
         >
-          <p className="text-light font-semibold">Hello Welcome!</p>
-          <h1 className="text-4xl md:text-6xl my-3 text-light font-bold text-center md:text-left">
+          <p className="m-3 text-light font-semibold">Hello Welcome!</p>
+          <h1 className="text-6xl my-3 text-light font-bold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4352f1] to-[#6943db]">
               Im Alejo Andino a
             </span>
-            <br />
+            <br></br>
             <TypeAnimation
               sequence={[
                 "Full Stack Developer",
@@ -67,7 +75,7 @@ export default function Home() {
               repeat={Infinity}
             />
           </h1>
-          <h2 className="text-light my-5 text-center md:text-left">
+          <h2 className="text-light my-5">
             Full-Stack developer specialized in turning ideas into innovative
             web applications. Experience in React.js (Next.js) and web
             development. If you&apos;re looking to take your ideas to the next
@@ -100,7 +108,7 @@ export default function Home() {
             </button>
 
             {isDropdownOpen && (
-              <div className="z-20 absolute mt-2 left-0 top-full w-48 bg-white rounded-lg shadow-md bg-gradient-to-br from-[#0c0d2a] to-[#081b50]">
+              <div className="absolute mt-2 left-0 top-full w-48 bg-white rounded-lg shadow-md bg-gradient-to-br from-[#0c0d2a] to-[#081b50]">
                 <div className="flex justify-end px-2 py-1">
                   <button
                     className="text-white rounded-md p-1 bg-red-600 hover:bg-red-800"
@@ -148,16 +156,8 @@ export default function Home() {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="relative flex justify-center items-center w-[380px] md:w-[50%]"
+          className="relative flex justify-center items-center w-[380px]"
         >
-          <Image
-            className="rounded-full relative h-[450px] w-[320px] flex justify-center items-center"
-            src={perfil}
-            width={300}
-            height={300}
-            alt="perfil"
-            style={{ zIndex: 10 }}
-          />
           <svg
             viewBox="0 0 500 500"
             xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,14 @@ export default function Home() {
                 attributeName="d"
                 dur="5000ms"
                 repeatCount="indefinite"
-                values="..."
+                values="
+          M449.5,326.5Q403,403,326.5,429Q250,455,177,425.5Q104,396,93.5,323Q83,250,84,167.5Q85,85,167.5,82.5Q250,80,309.5,105.5Q369,131,432.5,190.5Q496,250,449.5,326.5Z;
+          M406.5,329.5Q409,409,329.5,439.5Q250,470,175.5,434.5Q101,399,84,324.5Q67,250,102,193.5Q137,137,193.5,117Q250,97,322.5,101Q395,105,399.5,177.5Q404,250,406.5,329.5Z;
+          M420,313.5Q377,377,313.5,436.5Q250,496,182,441Q114,386,104.5,318Q95,250,113,190.5Q131,131,190.5,91.5Q250,52,321,80Q392,108,427.5,179Q463,250,420,313.5Z;
+          M429,324Q398,398,324,411.5Q250,425,170.5,417Q91,409,62.5,329.5Q34,250,74,182Q114,114,182,80Q250,46,316.5,81.5Q383,117,421.5,183.5Q460,250,429,324Z;
+          M441,338Q426,426,338,440Q250,454,177,425Q104,396,61.5,323Q19,250,71.5,187Q124,124,187,70.5Q250,17,327.5,56Q405,95,430.5,172.5Q456,250,441,338Z;
+          M448.5,330.5Q411,411,330.5,452Q250,493,182.5,439Q115,385,94.5,317.5Q74,250,78.5,166.5Q83,83,166.5,77.5Q250,72,326.5,84.5Q403,97,444.5,173.5Q486,250,448.5,330.5Z;
+          M449.5,326.5Q403,403,326.5,429Q250,455,177,425.5Q104,396,93.5,323Q83,250,84,167.5Q85,85,167.5,82.5Q250,80,309.5,105.5Q369,131,432.5,190.5Q496,250,449.5,326.5Z;"
                 key={animationKey}
                 onAnimationEnd={handleAnimationEnd}
               />
@@ -193,15 +200,31 @@ export default function Home() {
                 attributeName="d"
                 dur="7000ms"
                 repeatCount="indefinite"
-                values="..."
+                values="
+          M449.5,326.5Q403,403,326.5,429Q250,455,177,425.5Q104,396,93.5,323Q83,250,84,167.5Q85,85,167.5,82.5Q250,80,309.5,105.5Q369,131,432.5,190.5Q496,250,449.5,326.5Z;
+          M406.5,329.5Q409,409,329.5,439.5Q250,470,175.5,434.5Q101,399,84,324.5Q67,250,102,193.5Q137,137,193.5,117Q250,97,322.5,101Q395,105,399.5,177.5Q404,250,406.5,329.5Z;
+          M420,313.5Q377,377,313.5,436.5Q250,496,182,441Q114,386,104.5,318Q95,250,113,190.5Q131,131,190.5,91.5Q250,52,321,80Q392,108,427.5,179Q463,250,420,313.5Z;
+          M429,324Q398,398,324,411.5Q250,425,170.5,417Q91,409,62.5,329.5Q34,250,74,182Q114,114,182,80Q250,46,316.5,81.5Q383,117,421.5,183.5Q460,250,429,324Z;
+          M441,338Q426,426,338,440Q250,454,177,425Q104,396,61.5,323Q19,250,71.5,187Q124,124,187,70.5Q250,17,327.5,56Q405,95,430.5,172.5Q456,250,441,338Z;
+          M448.5,330.5Q411,411,330.5,452Q250,493,182.5,439Q115,385,94.5,317.5Q74,250,78.5,166.5Q83,83,166.5,77.5Q250,72,326.5,84.5Q403,97,444.5,173.5Q486,250,448.5,330.5Z;
+          M449.5,326.5Q403,403,326.5,429Q250,455,177,425.5Q104,396,93.5,323Q83,250,84,167.5Q85,85,167.5,82.5Q250,80,309.5,105.5Q369,131,432.5,190.5Q496,250,449.5,326.5Z;"
                 key={animationKey}
                 onAnimationEnd={handleAnimationEnd}
               />
             </path>
           </svg>
+
+          <Image
+            className="rounded-full relative h-[450px] w-[320px] flex justify-center items-center"
+            src={perfil}
+            width={300}
+            height={300}
+            alt="perfil"
+            style={{ zIndex: 10 }}
+          />
         </motion.div>
 
-        <div className="text-light mt-10 text-center md:text-right">
+        <div className="text-light">
           <div className="mb-10">
             <p className="text-4xl text-end mb-3">6M+</p>
             <h3 className="text-xl text-end font-bold">Experiencie</h3>
@@ -213,7 +236,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* About Section */}
       <About />
 

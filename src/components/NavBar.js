@@ -40,7 +40,7 @@ const NavBar = () => {
       </motion.div>
 
       <nav className="text-light pr-10">
-        <ul className="flex flex-col md:flex-row gap-9">
+        <ul className="flex gap-9">
           {menuOptions.map(({ id, label, href, delay }) => (
             <motion.li
               key={id}

@@ -15,7 +15,7 @@ const About = () => {
     >
       <div className="flex items-center relative mb-6 md:mb-0">
         <Image
-          className="rounded-3xl"
+          className="rounded-3xl w-full"
           src={programming}
           alt="programming"
           width={550}
@@ -23,7 +23,7 @@ const About = () => {
         />
 
         <Image
-          className="absolute bg-dark -right-10 -bottom-10 rounded-full p-4 animate-spin"
+          className="absolute bg-dark right-10 -bottom-10 rounded-full p-4 animate-spin"
           src={spinner}
           alt="spinner"
           width={200}
