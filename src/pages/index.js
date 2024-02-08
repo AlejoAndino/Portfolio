@@ -111,17 +111,37 @@ export default function Home() {
               <div className="absolute mt-2 left-0 top-full w-48 bg-white rounded-lg shadow-md bg-gradient-to-br from-[#0c0d2a] to-[#081b50]">
                 <div className="flex justify-end px-2 py-1">
                   <button
-                    className="text-white rounded-md p-1 bg-red-600"
+                    className="text-white rounded-md p-1 bg-red-600 hover:bg-red-800"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     X
                   </button>
                 </div>
-                <button onClick={() => {setIsDropdownOpen(false)}} className="inline-flex rounded-md justify-center px-4 py-2 text-white hover:bg-slate-900 w-full text-left">
-                  Spanish
+                <button
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                  }}
+                  className="inline-flex rounded-md justify-center px-4 py-2 text-white hover:bg-slate-900 w-full text-left"
+                >
+                  <a
+                    href="/Alejo_Andino_Resume_3.0.pdf"
+                    download={"Alejo_Andino_Resume_3.0.pdf"}
+                  >
+                    Spanish
+                  </a>
                 </button>
-                <button onClick={() => {setIsDropdownOpen(false)}} className="inline-flex rounded-md justify-center px-4 py-2 text-white hover:bg-slate-900 w-full text-left">
-                  English
+                <button
+                  onClick={() => {
+                    setIsDropdownOpen(false);
+                  }}
+                  className="inline-flex rounded-md justify-center px-4 py-2 text-white hover:bg-slate-900 w-full text-left"
+                >
+                  <a
+                    href="/Alejo-Andino-Resume-English-3.0.pdf"
+                    download={"Alejo-Andino-Resume-English-3.0.pdf"}
+                  >
+                    English
+                  </a>
                 </button>
               </div>
             )}
