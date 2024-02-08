@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import perfil from "../assets/perfil.png";
+import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 import About from "../components/About";
 import Experience from "@/components/Experience";
@@ -9,7 +10,8 @@ import Projects from "@/components/Projects/Projects";
 import Contact from "@/components/Contact";
 import banner from "../assets/banner-bg.png";
 import NavBar from "@/components/NavBar";
-import { useState , useEffect } from "react";
+import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [animationKey, setAnimationKey] = useState(0);
@@ -53,21 +55,53 @@ export default function Home() {
         >
           <p className="m-3 text-light font-semibold">Hello Welcome!</p>
           <h1 className="text-6xl my-3 text-light font-bold">
-            Im Alejo Andino <br /> a Full Stack Developer
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4352f1] to-[#6943db]">
+              Im Alejo Andino a
+            </span>
+            <br></br>
+            <TypeAnimation
+              sequence={[
+                "Full Stack Developer",
+                1000,
+                "Front-End Developer",
+                1000,
+                "Back-End Developer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
           </h1>
-          <Link className="font-bold" href={"/"}>
-            <button className="w-[100px] h-[40px] my-4 rounded-full bg-white">
+          <h2 className="text-light my-5">
+            Full-Stack developer specialized in turning ideas into innovative
+            web applications. Experience in React.js (Next.js) and web development. If you&apos;re
+            looking to take your ideas to the next level, Contact me!
+          </h2>
+          <Link
+            className="font-bold"
+            href={"/#contact"}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("contact").scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            <button className="w-[100px] h-[40px] my-4 mx-6 rounded-full bg-white">
               Hire me
             </button>
           </Link>
-          <h2 className="text-light my-5">
-            As an Full-Stack developer, I am dedicated to turning ideas into
-            innovative web applications. Through my latest projects and
-            articles, you can discover my skills and expertise in React.js and
-            web development. If you are looking for a developer who can take
-            your ideas to the next level, do not hesitate to contact me.
-          </h2>
-          <p className="text-light">Follow me:</p>
+
+          <Link
+            href="/"
+            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary to-blue-800 hover:bg-slate-800 text-white mt-3"
+          >
+            <span className="flex items-center bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              Download CV
+              <HiDownload className="opacity-60 group-hover:translate-y-1 transition ml-1" />
+            </span>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -151,10 +185,7 @@ export default function Home() {
             <p className="text-4xl text-end mb-3">6M+</p>
             <h3 className="text-xl text-end font-bold">Experiencie</h3>
           </div>
-          <div className="mb-10">
-            <p className="text-4xl text-end mb-3">100%</p>
-            <h3 className="text-xl text-end font-bold">Success Rate</h3>
-          </div>
+        
           <div className="mb-10">
             <p className="text-4xl text-end mb-3">4</p>
             <h3 className="text-xl text-end font-bold">Projects Completed</h3>
