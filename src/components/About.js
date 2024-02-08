@@ -47,7 +47,7 @@ const About = () => {
           to produce outstanding web applications.
         </p>
         <p>Here are a few technologies I’ve been working with recently:</p>
-        <ul className="list-disc list-inside text-[#2095d8] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ul className="list-disc list-inside text-[#2095d8] mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <li>React</li>
           <li>Redux</li>
           <li>Next.js</li>

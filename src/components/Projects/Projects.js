@@ -5,7 +5,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 import chicCloset from "../../assets/ChicCloset.png";
 import gameLibrary from "../../assets/GameLibrary.png";
-import portafolio from '../../assets/Portafolio.png';
+import portafolio from "../../assets/Portafolio.png";
 
 function Projects() {
   const projectsData = [
@@ -14,18 +14,23 @@ function Projects() {
       projectName: "ChicCloset",
       projectLink: "https://chiccloset-service.web.app/",
       projectDescription:
-        "This is a web application that uses the PokeAPI to display information about different Pokemon, including their evolution levels and details. You can compare multiple Pokemon using a queue, and add them to your personal list using Firebase's Firestore database.",
+        "This project is a clothing E-Commerce developed under SCRUM methodologies. Allows users to buy quality products with Mercado Pago and leave reviews. Administrators manage inventory from a CMS. The objective is to offer an agile and safe purchasing experience.",
       projectTech: [
+        "Javascript",
         "React",
-        "Redux Toolkit",
-        "SCSS",
-        "Firebase",
-        "Typescript",
-        "PokeApi",
+        "Redux",
+        "Tailwind CSS",
+        "MongoDB",
+        "Express",
+        "Google Login",
+        "Mercado Pago",
+        "Cloudinary",
+        "Auth0",
+        "Material-UI",
       ],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/AlejoAndino/ChicCloset",
+        externalLink: "https://chiccloset-service.web.app/",
       },
     },
     {
@@ -33,37 +38,40 @@ function Projects() {
       projectName: "Game Library APP",
       projectLink: "https://deploy-videogames-eight.vercel.app/",
       projectDescription:
-        "This is a chat app made with React and Node.js that sends real-time messages and is highly scalable. It uses advanced JavaScript concepts like debouncing and is optimized for React. It has 300+ stars on GitHub and over 180k views on YouTube.",
+        "It is a video game library that uses the rawg.io API as an external API. Developed with Node.js, Express.js and SQL with PostgreSQL as back-end and database technologies, and Sequelize as ORM. For the front-end, the application was developed using the React JavaScript library, along with Redux, as the global state manager. The styling was achieved with pure CSS.",
       projectTech: [
         "React",
-        "Sockets",
+        "SQL",
+        "Redux",
         "Node.js",
-        "Express",
+        "Express.js",
         "MongoDB",
-        "Styled Components",
+        "CSS Modules",
+        "Sequelize",
+        "PostgreSQL",
+        "External API",
       ],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/AlejoAndino/deploy-Videogames",
+        externalLink: "https://deploy-videogames-eight.vercel.app/",
       },
     },
     {
       image: portafolio,
       projectName: "PortFolio",
-      projectLink: "https://deploy-videogames-eight.vercel.app/",
+      projectLink: "https://portfolio-theta-one-33.vercel.app/",
       projectDescription:
-        "This is a chat app made with React and Node.js that sends real-time messages and is highly scalable. It uses advanced JavaScript concepts like debouncing and is optimized for React. It has 300+ stars on GitHub and over 180k views on YouTube.",
+        "It is a SPA from my portfolio, I carried out this project with Next.js from React, it uses Framer Motion for advanced animations, it was styled with Tailwind CSS for greater agility and complexity of the components, the project was deployed in Vercel. It is a Front End project. I learned a lot by doing it",
       projectTech: [
         "React",
-        "Sockets",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Styled Components",
+        "Next.js",
+        "Vercel",
+        "Tailwind CSS",
+        "Framer Motion",
       ],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/AlejoAndino/Portfolio",
+        externalLink: "https://portfolio-theta-one-33.vercel.app/",
       },
     },
   ];
@@ -104,7 +112,9 @@ function Projects() {
             const isInverted = index === 1;
             return (
               <motion.div
-                className={`flex justify-center relative ${isInverted ? "flex-row-reverse" : "flex-row"}`}
+                className={`flex justify-center relative ${
+                  isInverted ? "flex-row-reverse" : "flex-row"
+                }`}
                 key={projectName}
                 initial="hidden"
                 whileInView="visible"
@@ -123,16 +133,22 @@ function Projects() {
                     alt={projectName}
                     quality={100}
                   />
-                  <span className="bg-[#7f1ee7] rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-[600px] h-[300px]">&nbsp;</span>
+                  <span className="bg-[#7f1ee7] rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-[600px] h-[300px]">
+                    &nbsp;
+                  </span>
                 </div>
 
-                <div className={`z-10 flex ${isInverted ? "items-start" : "items-end"} flex-col w-[650px] gap-2`}>
+                <div
+                  className={`z-10 flex ${
+                    isInverted ? "items-start" : "items-end"
+                  } flex-col w-[650px] gap-2`}
+                >
                   <p className="text-[#2095d8]">Featured Project</p>
                   <h3 className="text-4xl font-semibold">{projectName}</h3>
                   <div className="bg-[#101010] w-[750px] p-6">
                     <p>{projectDescription}</p>
                   </div>
-                  <ul className="flex gap-8 my-3">
+                  <ul className="my-3 mx-4 text-white mt-2 flex flex-wrap gap-4">
                     {projectTech.map((tech) => (
                       <li className="project-info-tech-list-item" key={tech}>
                         {tech}
@@ -142,6 +158,7 @@ function Projects() {
                   <ul className="flex gap-7">
                     <li className="project-info-links-item">
                       <Link
+                        target="blank"
                         href={projectExternalLinks.github}
                         className="project-info-links-item-link"
                       >
@@ -150,6 +167,7 @@ function Projects() {
                     </li>
                     <li className="project-info-links-item">
                       <Link
+                        target="blank"
                         href={projectExternalLinks.externalLink}
                         className="project-info-links-item-link"
                       >
