@@ -15,6 +15,8 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [animationKey, setAnimationKey] = useState(0);
+  //Para menu Desplegable
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleAnimationEnd = () => {
     setAnimationKey(animationKey + 1);
@@ -44,7 +46,7 @@ export default function Home() {
         id="home"
       >
         <motion.div
-          className="w-[750px]"
+          className="w-[750px] relative"
           initial={{ y: 200, opacity: 0, scale: 1 }}
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{
@@ -75,8 +77,9 @@ export default function Home() {
           </h1>
           <h2 className="text-light my-5">
             Full-Stack developer specialized in turning ideas into innovative
-            web applications. Experience in React.js (Next.js) and web development. If you&apos;re
-            looking to take your ideas to the next level, Contact me!
+            web applications. Experience in React.js (Next.js) and web
+            development. If you&apos;re looking to take your ideas to the next
+            level, Contact me!
           </h2>
           <Link
             className="font-bold"
@@ -93,15 +96,36 @@ export default function Home() {
             </button>
           </Link>
 
-          <Link
-            href="/"
-            className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary to-blue-800 hover:bg-slate-800 text-white mt-3"
-          >
-            <span className="flex items-center bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-              Download CV
-              <HiDownload className="opacity-60 group-hover:translate-y-1 transition ml-1" />
-            </span>
-          </Link>
+          <div className="inline-flex relative">
+            <button
+              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary to-blue-800 hover:bg-slate-800 text-white mt-3"
+              onClick={() => setIsDropdownOpen("open")}
+            >
+              <span className="flex items-center bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Download CV
+                <HiDownload className="opacity-60 group-hover:translate-y-1 transition ml-1" />
+              </span>
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute mt-2 left-0 top-full w-48 bg-white rounded-lg shadow-md bg-gradient-to-br from-[#0c0d2a] to-[#081b50]">
+                <div className="flex justify-end px-2 py-1">
+                  <button
+                    className="text-white rounded-md p-1 bg-red-600"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    X
+                  </button>
+                </div>
+                <button onClick={() => {setIsDropdownOpen(false)}} className="inline-flex rounded-md justify-center px-4 py-2 text-white hover:bg-slate-900 w-full text-left">
+                  Spanish
+                </button>
+                <button onClick={() => {setIsDropdownOpen(false)}} className="inline-flex rounded-md justify-center px-4 py-2 text-white hover:bg-slate-900 w-full text-left">
+                  English
+                </button>
+              </div>
+            )}
+          </div>
         </motion.div>
 
         <motion.div
@@ -185,7 +209,7 @@ export default function Home() {
             <p className="text-4xl text-end mb-3">6M+</p>
             <h3 className="text-xl text-end font-bold">Experiencie</h3>
           </div>
-        
+
           <div className="mb-10">
             <p className="text-4xl text-end mb-3">4</p>
             <h3 className="text-xl text-end font-bold">Projects Completed</h3>
