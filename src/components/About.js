@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="text-light flex flex-col md:flex-row h-[80vh] justify-around items-center bg-cover bg-no-repeat"
+      className="text-light flex flex-col p-4 md:flex-row md:h-screen justify-around items-center bg-cover bg-no-repeat"
       style={{
         backgroundImage: `url(${colorSharp.src})`
       }}
@@ -23,24 +23,24 @@ const About = () => {
         />
 
         <Image
-          className="absolute bg-dark right-10 -bottom-10 rounded-full p-4 animate-spin"
+          className="absolute w-[150px] bg-dark -right-10 -bottom-10 md:w-[200px] rounded-full p-4 animate-spin"
           src={spinner}
           alt="spinner"
-          width={200}
+          // width={150}
         />
       </div>
 
       <div className="w-full md:w-[700px]">
-        <h2 className="text-4xl mb-4 font-bold">
+        <h2 className="text-[33px] text-center mb-4 font-bold">
           About Me{" "}
-          <span className="h-[1px] ml-2 w-[450px] md:w-full inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
+          <span className="h-[1px] w-full md:w-full inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
           </span>
         </h2>
-        <h3 className="text-3xl mb-4 font-bold">
+        <h3 className="text-2xl mb-4 font-bold">
           A dedicated Full Stack Developer based in Cordoba, Argentina 📍
         </h3>
-        <p className="my-4">
+        <p className="my-4 text-sm font-semibold">
           As a Junior Full Stack Developer, I possess an impressive arsenal of
           skills. I excel in designing and maintaining responsive websites that
           offer a smooth user experience. My expertise lies in crafting dynamic,
@@ -49,8 +49,8 @@ const About = () => {
           team player who thrives in collaborating with cross-functional teams
           to produce outstanding web applications.
         </p>
-        <p>Here are a few technologies I’ve been working with recently:</p>
-        <ul className="list-disc list-inside text-[#2095d8] mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <p className="font-semibold">Here are a few technologies I’ve been working with recently:</p>
+        <ul className="list-disc list-inside text-[#2095d8] mt-2 grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <li>React</li>
           <li>Redux</li>
           <li>Next.js</li>

@@ -77,7 +77,7 @@ function Projects() {
   ];
 
   return (
-    <div className="text-light mx-4 md:mx-20" id="projects">
+    <div className="text-light mx-4 md:mx-20 md:h-screen" id="projects">
       <motion.div
         className="flex justify-center"
         initial="hidden"
