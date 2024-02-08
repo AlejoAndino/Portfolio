@@ -6,31 +6,34 @@ import colorSharp from '../assets/color-sharp.png';
 
 const About = () => {
   return (
-    <div id="about" className="text-light flex h-[80vh] justify-around items-center bg-cover bg-no-repeat"
-    style={{
-      backgroundImage: `url(${colorSharp.src})`
-    }}>
-      <div className="flex items-center relative">
+    <div
+      id="about"
+      className="text-light flex flex-col md:flex-row h-[80vh] justify-around items-center bg-cover bg-no-repeat"
+      style={{
+        backgroundImage: `url(${colorSharp.src})`
+      }}
+    >
+      <div className="flex items-center relative mb-6 md:mb-0">
         <Image
           className="rounded-3xl"
           src={programming}
           alt="programming"
-          width={"550"}
-          height={"500"}
+          width={550}
+          height={500}
         />
 
         <Image
           className="absolute bg-dark -right-10 -bottom-10 rounded-full p-4 animate-spin"
           src={spinner}
           alt="spinner"
-          width={"200"}
+          width={200}
         />
       </div>
 
-      <div className="w-[700px]">
+      <div className="w-full md:w-[700px]">
         <h2 className="text-4xl mb-4 font-bold">
           About Me{" "}
-          <span className="h-[1px] ml-2 w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
+          <span className="h-[1px] ml-2 w-[450px] md:w-full inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
           </span>
         </h2>

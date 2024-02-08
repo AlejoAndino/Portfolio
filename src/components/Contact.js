@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -15,16 +15,16 @@ const Contact = () => {
           Contact
         </p>
         <h2 className="py-4 text-light font-semibold">Get In Touch</h2>
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-1 gap-8 lg:gap-0 lg:flex lg:justify-center">
           {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-blue-500 rounded-xl p-4 text-light">
+          <div className="lg:max-w-[600px] w-full h-auto shadow-xl shadow-blue-500 rounded-xl p-4 text-light">
             <div className="lg:p-4 h-full ">
               <div>
                 <div className="col-12">
                   <div className="google-map">
                     <div className="embed-responsive embed-responsive-21by9">
                       <iframe
-                        className="embed-responsive-item w-[400px] h-[250px]"
+                        className="embed-responsive-item w-full h-[250px]"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108977.23899067316!2d-64.27661234475407!3d-31.399280323158536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1684962497876!5m2!1ses!2sar"
                         allowFullScreen=""
                       />
@@ -69,7 +69,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-blue-500 rounded-xl lg:p-4">
+          <div className="lg:max-w-[600px] w-full h-auto shadow-xl shadow-blue-500 rounded-xl lg:p-4">
             <div className="p-4">
               <form
                 action="https://getform.io/f/6be128ae-91a1-489a-8e37-30bdede0447e"

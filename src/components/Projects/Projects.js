@@ -75,8 +75,9 @@ function Projects() {
       },
     },
   ];
+
   return (
-    <div className="text-light mx-20" id="projects">
+    <div className="text-light mx-4 md:mx-20" id="projects">
       <motion.div
         className="flex justify-center"
         initial="hidden"
@@ -89,14 +90,14 @@ function Projects() {
         }}
       >
         <h2 className="text-4xl font-bold">
-          Latest Proyects{" "}
+          Latest Projects{" "}
           <span className="h-[1px] ml-2 w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
           </span>
         </h2>
       </motion.div>
 
-      <div className="m-11 flex flex-col gap-32">
+      <div className="m-6 md:m-11 flex flex-col gap-16 md:gap-32">
         {projectsData.map(
           (
             {
@@ -112,8 +113,8 @@ function Projects() {
             const isInverted = index === 1;
             return (
               <motion.div
-                className={`flex justify-center relative ${
-                  isInverted ? "flex-row-reverse" : "flex-row"
+                className={`flex flex-col md:flex-row ${
+                  isInverted ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
                 key={projectName}
                 initial="hidden"
@@ -125,56 +126,49 @@ function Projects() {
                   hidden: { opacity: 0, y: 0 },
                 }}
               >
-                <div className="relative">
+                <div className="relative w-full md:w-1/2">
                   <Image
-                    className="h-[300px] rounded-xl"
+                    className="rounded-xl"
                     width={600}
                     src={image}
                     alt={projectName}
                     quality={100}
                   />
-                  <span className="bg-[#7f1ee7] rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-[600px] h-[300px]">
+                  <span className="bg-[#7f1ee7] rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">
                     &nbsp;
                   </span>
                 </div>
 
-                <div
-                  className={`z-10 flex ${
-                    isInverted ? "items-start" : "items-end"
-                  } flex-col w-[650px] gap-2`}
-                >
-                  <p className="text-[#2095d8]">Featured Project</p>
-                  <h3 className="text-4xl font-semibold">{projectName}</h3>
-                  <div className="bg-[#101010] w-[750px] p-6">
-                    <p>{projectDescription}</p>
+                <div className="z-10 flex flex-col md:w-1/2 justify-between">
+                  <div>
+                    <p className="text-[#2095d8]">Featured Project</p>
+                    <h3 className="text-4xl font-semibold">{projectName}</h3>
+                    <div className="bg-[#101010] p-6 mt-4 md:mt-0">
+                      <p>{projectDescription}</p>
+                    </div>
                   </div>
-                  <ul className="my-3 mx-4 text-white mt-2 flex flex-wrap gap-4">
+                  <div className="flex flex-wrap mt-4 md:mt-8">
                     {projectTech.map((tech) => (
-                      <li className="project-info-tech-list-item" key={tech}>
+                      <span className="px-3 py-1 bg-gray-800 rounded-lg text-white mr-2 mb-2" key={tech}>
                         {tech}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
-                  <ul className="flex gap-7">
-                    <li className="project-info-links-item">
-                      <Link
-                        target="blank"
-                        href={projectExternalLinks.github}
-                        className="project-info-links-item-link"
-                      >
-                        <FiGithub size={25} />
-                      </Link>
-                    </li>
-                    <li className="project-info-links-item">
-                      <Link
-                        target="blank"
-                        href={projectExternalLinks.externalLink}
-                        className="project-info-links-item-link"
-                      >
-                        <FiExternalLink size={25} />
-                      </Link>
-                    </li>
-                  </ul>
+                  </div>
+                  <div className="flex mt-4 md:mt-8">
+                    <Link
+                      target="_blank"
+                      href={projectExternalLinks.github}
+                      className="mr-4"
+                    >
+                      <FiGithub size={25} />
+                    </Link>
+                    <Link
+                      target="_blank"
+                      href={projectExternalLinks.externalLink}
+                    >
+                      <FiExternalLink size={25} />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             );
