@@ -130,10 +130,10 @@ function Projects() {
                 transition={{ duration: 0.6 }}
                 variants={{
                   visible: { opacity: 1, y: 0 },
-                  hidden: { opacity: 0, y: 200 },
+                  hidden: { opacity: 0, y: 250 },
                 }}
               >
-                <div className="relative w-full md:w-1/2">
+                <div className="relative w-full md:w-fit md:h-fit md:mx-10">
                   <Image
                     className="rounded-xl"
                     width={600}
@@ -141,7 +141,7 @@ function Projects() {
                     alt={projectName}
                     quality={100}
                   />
-                  <span className="bg-[#7f1ee7] rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">
+                  <span className="bg-[#7f1ee7] md:w-full rounded-xl bg-opacity-30 hover:bg-opacity-0 transition-all duration-500 absolute top-0 left-0 w-full h-full">
                     &nbsp;
                   </span>
                 </div>
