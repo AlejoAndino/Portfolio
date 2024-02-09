@@ -9,9 +9,9 @@ const About = () => {
     <div
       id="about"
       className="text-light flex flex-col p-4 md:flex-row md:h-screen justify-around items-center bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url(${colorSharp.src})`
-      }}
+      // style={{
+      //   backgroundImage: `url(${colorSharp.src})`
+      // }}
     >
       <div className="flex items-center relative mb-6 md:mb-0">
         <Image
@@ -50,7 +50,7 @@ const About = () => {
           to produce outstanding web applications.
         </p>
         <p className="font-semibold">Here are a few technologies I’ve been working with recently:</p>
-        <ul className="list-disc list-inside text-[#2095d8] mt-2 grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ul className="list-disc list-inside text-[#2095d8] mt-2 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
           <li>React</li>
           <li>Redux</li>
           <li>Next.js</li>

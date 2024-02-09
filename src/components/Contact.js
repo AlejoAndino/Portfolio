@@ -9,10 +9,10 @@ import ContactImg from "../assets/GameLibrary.png";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen md:pt-0">
+    <div id="contact" className="w-full lg:h-screen pt-24 p-4 md:pt-0">
       <div className="max-w-[1240px] m-auto px-2 w-full md:flex md:flex-col md:justify-end md:h-screen">
         <div>
-          <p className="text-xl tracking-widest uppercase text-[#2057d8]">
+          <p className="text-xl tracking-widest uppercase text-[#2057d8] font-bold">
             Contact
           </p>
           <h2 className="py-4 text-light font-semibold">Get In Touch</h2>

@@ -79,14 +79,14 @@ function Projects() {
 
   return (
     <div
-      className="text-light mx-4 md:mx-0 md:h-full bg-cover bg-no-repeat"
+      className="text-light mx-4 md:mx-0 md:h-full bg-cover bg-no-repeat pt-20 md:pt-0"
       id="projects"
       // style={{
       //   backgroundImage: `url(${colorSharp.src})`,
       // }}
     >
       <motion.div
-        className="flex justify-center md:pt-36"
+        className="flex justify-center md:pt-36 w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -96,9 +96,9 @@ function Projects() {
           hidden: { opacity: 0, y: 0 },
         }}
       >
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-bold w-full text-center">
           Latest Projects{" "}
-          <span className="h-[1px] ml-2 w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
+          <span className="h-[1px] md:ml-2 md:w-[450px] w-full inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
           </span>
         </h2>
@@ -154,7 +154,7 @@ function Projects() {
                       <p>{projectDescription}</p>
                     </div>
                   </div>
-                  <div className="flex flex-wrap mt-4 md:mt-8">
+                  <div className="flex justify-center flex-wrap mt-4 md:mt-8">
                     {projectTech.map((tech) => (
                       <span
                         className="px-3 py-1 bg-gray-800 rounded-lg text-white mr-2 mb-2"

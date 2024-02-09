@@ -38,13 +38,13 @@ export default function Home() {
 
       {/* HOME Section */}
       <div
-        className="overflow-hidden pt-24 md:pt-0"
+        className="overflow-hidden md:pt-0"
         // style={{
         //   backgroundImage: `url(${banner.src})`,
         // }}
       >
         <div
-          className="flex justify-around items-center h-full md:h-screen bg-cover bg-center bg-no-repeat"
+          className="flex justify-around pt-12 items-center h-full md:h-screen bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${banner.src})`,
           }}
@@ -120,7 +120,7 @@ export default function Home() {
                   </button>
 
                   {isDropdownOpen && (
-                    <div className="absolute mt-2 left-0 top-full w-48 bg-white rounded-lg shadow-md bg-gradient-to-br from-[#0c0d2a] to-[#081b50]">
+                    <div className="absolute z-20 mt-2 left-8 md:left-0 top-full w-48 bg-white rounded-lg shadow-md bg-gradient-to-br from-[#0c0d2a] to-[#081b50]">
                       <div className="flex justify-end px-2 py-1">
                         <button
                           className="text-white rounded-md p-1 bg-red-600 hover:bg-red-800"

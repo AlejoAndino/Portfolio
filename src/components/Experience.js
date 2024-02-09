@@ -12,11 +12,14 @@ const Experience = () => {
   });
 
   return (
-    <div id="experience" className="text-light relative mt-24 md:mt-0 lg:mt-0 flex flex-col items-center justify-center md:h-screen">
-      <div className="flex justify-center mb-8 md:mb-14">
-        <h2 className="text-4xl font-bold">
+    <div
+      id="experience"
+      className="text-light relative mt-24 p-4 md:mt-0 lg:mt-0 flex flex-col items-center justify-center md:h-screen"
+    >
+      <div className="flex justify-center mb-8 md:mb-14 w-full">
+        <h2 className="text-4xl font-bold w-full text-center">
           Experience{" "}
-          <span className="h-[1px] ml-6 w-[300px] md:w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
+          <span className="h-[1px] md:ml-6 w-full md:w-[450px] inline-block bg-light relative top-5 group-hover:w-full transition-[width] ease duration-300">
             &nbsp;
           </span>
         </h2>
@@ -32,7 +35,7 @@ const Experience = () => {
 
         <div className="flex flex-col-reverse md:flex-row bg-[#0b0a15] p-8 md:w-[800px] lg:w-[900px] rounded-xl">
           <div className="md:w-[150px] md:h-[150px] mx-auto md:mx-0 mt-2">
-            <Image src={henrylogo} alt="logo" /> 
+            <Image src={henrylogo} alt="logo" />
           </div>
 
           <div className="md:ml-5 md:mr-auto">
@@ -54,9 +57,11 @@ const Experience = () => {
                 Propose ideas to improve the Bootcamp processes.
               </li>
             </ul>
-            <p className="bg-[#2095d8] rounded-sm p-2 text-black font-bold mt-4 md:mt-0 md:mr-5 inline-block">
-              Partial Time
-            </p>
+            <div className="w-full flex justify-center md:block">
+              <p className="bg-[#2095d8] rounded-sm p-2 text-black font-bold mt-4 md:mt-0 md:mr-5 inline-block">
+                Partial Time
+              </p>
+            </div>
           </div>
         </div>
       </div>
