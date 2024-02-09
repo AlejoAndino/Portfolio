@@ -62,13 +62,14 @@ function Projects() {
       projectName: "PortFolio",
       projectLink: "https://portfolio-theta-one-33.vercel.app/",
       projectDescription:
-        "It is a SPA from my portfolio, I carried out this project with Next.js from React, it uses Framer Motion for advanced animations, it was styled with Tailwind CSS for greater agility and complexity of the components, the project was deployed in Vercel. It is a Front End project. I learned a lot by doing it",
+        "It is a SPA from my portfolio, I carried out this project with Next.js from React, it uses Framer Motion for advanced animations, it was styled with Tailwind CSS for greater agility and complexity of the components, the project was deployed in Vercel, it was made responsive by adapting it to all mobile screens. It is a Front End project. I learned a lot doing it",
       projectTech: [
         "React",
         "Next.js",
         "Vercel",
         "Tailwind CSS",
         "Framer Motion",
+        "Responsive",
       ],
       projectExternalLinks: {
         github: "https://github.com/AlejoAndino/Portfolio",
