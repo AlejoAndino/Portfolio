@@ -77,9 +77,9 @@ function Projects() {
   ];
 
   return (
-    <div className="text-light mx-4 md:mx-20 md:h-screen" id="projects">
+    <div className="text-light mx-4 md:mx-20 md:h-full" id="projects">
       <motion.div
-        className="flex justify-center"
+        className="flex justify-center md:mt-36"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -97,7 +97,7 @@ function Projects() {
         </h2>
       </motion.div>
 
-      <div className="m-6 md:m-11 flex flex-col gap-16 md:gap-32">
+      <div className="m-6 md:m-11 md:h-full flex flex-col gap-16 md:gap-32">
         {projectsData.map(
           (
             {
