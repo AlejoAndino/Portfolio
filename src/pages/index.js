@@ -238,8 +238,8 @@ export default function Home() {
             </motion.div>
             <div className="text-light my-16 flex justify-around w-full md:w-[400px] text-center md:flex-col">
               <div className="mb-10 flex flex-col">
-                <p className="text-4xl mb-3">6M+</p>
-                <h3 className="text-xl font-bold">Experiencie</h3>
+                <p className="text-4xl mb-3">1</p>
+                <h3 className="text-xl font-bold">Years of Experiencie</h3>
               </div>
 
               <div className="mb-10 flex flex-col">
