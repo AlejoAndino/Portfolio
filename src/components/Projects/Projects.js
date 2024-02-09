@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import chicCloset from "../../assets/ChicCloset.png";
 import gameLibrary from "../../assets/GameLibrary.png";
 import portafolio from "../../assets/Portafolio.png";
+import colorSharp from '../../assets/color-sharp-fotor-invertido.png'
 
 function Projects() {
   const projectsData = [
@@ -77,15 +78,21 @@ function Projects() {
   ];
 
   return (
-    <div className="text-light mx-4 md:mx-20 md:h-full" id="projects">
+    <div
+      className="text-light mx-4 md:mx-0 md:h-full bg-cover bg-no-repeat"
+      id="projects"
+      // style={{
+      //   backgroundImage: `url(${colorSharp.src})`,
+      // }}
+    >
       <motion.div
-        className="flex justify-center md:mt-36"
+        className="flex justify-center md:pt-36"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         variants={{
-          visible: { opacity: 1, y: -50 },
+          visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 0 },
         }}
       >
@@ -97,7 +104,7 @@ function Projects() {
         </h2>
       </motion.div>
 
-      <div className="m-6 md:m-11 md:h-full flex flex-col gap-16 md:gap-32">
+      <div className="m-6 md:m-11 md:h-full md:mx-20 flex flex-col gap-16 md:gap-32">
         {projectsData.map(
           (
             {
@@ -122,8 +129,8 @@ function Projects() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 variants={{
-                  visible: { opacity: 1, y: -50 },
-                  hidden: { opacity: 0, y: 0 },
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: 200 },
                 }}
               >
                 <div className="relative w-full md:w-1/2">
@@ -149,7 +156,10 @@ function Projects() {
                   </div>
                   <div className="flex flex-wrap mt-4 md:mt-8">
                     {projectTech.map((tech) => (
-                      <span className="px-3 py-1 bg-gray-800 rounded-lg text-white mr-2 mb-2" key={tech}>
+                      <span
+                        className="px-3 py-1 bg-gray-800 rounded-lg text-white mr-2 mb-2"
+                        key={tech}
+                      >
                         {tech}
                       </span>
                     ))}

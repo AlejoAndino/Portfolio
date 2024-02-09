@@ -9,15 +9,15 @@ import ContactImg from "../assets/GameLibrary.png";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 w-full md:flex md:flex-col md:justify-end md:h-full">
+    <div id="contact" className="w-full lg:h-screen md:pt-0">
+      <div className="max-w-[1240px] m-auto px-2 w-full md:flex md:flex-col md:justify-end md:h-screen">
         <div>
           <p className="text-xl tracking-widest uppercase text-[#2057d8]">
             Contact
           </p>
           <h2 className="py-4 text-light font-semibold">Get In Touch</h2>
         </div>
-        <div className="grid lg:grid-cols-1 gap-8 lg:gap-0 lg:flex lg:justify-center">
+        <div className="grid lg:grid-cols-1 gap-8 lg:gap-0 lg:flex lg:justify-center md:h-[750px]">
           {/* left */}
           <div className="lg:max-w-[600px] w-full h-auto shadow-xl shadow-blue-500 rounded-xl p-4 text-light">
             <div className="lg:p-4 h-full ">
@@ -84,7 +84,7 @@ const Contact = () => {
                       Name
                     </label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                       type="text"
                       name="name"
                     />
@@ -94,7 +94,7 @@ const Contact = () => {
                       Phone Number
                     </label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                       type="text"
                       name="phone"
                     />
@@ -105,9 +105,10 @@ const Contact = () => {
                     Email
                   </label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                     type="email"
                     name="email"
+                    placeholder="example@google.com"
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -115,7 +116,7 @@ const Contact = () => {
                     Subject
                   </label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                     type="text"
                     name="subject"
                   />
@@ -125,9 +126,10 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
-                    className="border-2 rounded-lg p-3 border-gray-300"
+                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                     rows="10"
                     name="message"
+                    placeholder="Let's talk about..."
                   ></textarea>
                 </div>
                 <button className="w-full bg-[#2057d8] rounded-xl p-4 text-gray-100 mt-4 font-semibold">

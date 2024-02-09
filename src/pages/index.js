@@ -39,12 +39,15 @@ export default function Home() {
       {/* HOME Section */}
       <div
         className="overflow-hidden pt-24 md:pt-0"
-        style={{
-          backgroundImage: `url(${banner.src})`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${banner.src})`,
+        // }}
       >
         <div
           className="flex justify-around items-center h-full md:h-screen bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${banner.src})`,
+          }}
           id="home"
         >
           <motion.div

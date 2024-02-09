@@ -12,7 +12,7 @@ const Experience = () => {
   });
 
   return (
-    <div id="experience" className="text-light relative mt-24 md:mt-32 lg:mt-48 flex flex-col items-center justify-center md:h-screen">
+    <div id="experience" className="text-light relative mt-24 md:mt-0 lg:mt-0 flex flex-col items-center justify-center md:h-screen">
       <div className="flex justify-center mb-8 md:mb-14">
         <h2 className="text-4xl font-bold">
           Experience{" "}
