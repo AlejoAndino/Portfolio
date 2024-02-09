@@ -2,16 +2,16 @@ import Image from "next/image";
 import React from "react";
 import programming from "../assets/programming.jpg";
 import spinner from "../assets/spinner.png";
-import colorSharp from '../assets/color-sharp-fotor-20240209135752.png';
+import colorSharp from '../assets/color-sharp.png';
 
 const About = () => {
   return (
     <div
       id="about"
       className="text-light flex flex-col p-4 md:flex-row md:h-screen justify-around items-center bg-cover bg-no-repeat"
-      // style={{
-      //   backgroundImage: `url(${colorSharp.src})`
-      // }}
+      style={{
+        backgroundImage: `url(${colorSharp.src})`
+      }}
     >
       <div className="flex items-center relative mb-6 md:mb-0">
         <Image
