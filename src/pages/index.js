@@ -261,6 +261,6 @@ export default function Home() {
         {/* Contact Section */}
         <Contact />
       </div>
-    </> 
+    </>
   );
 }
